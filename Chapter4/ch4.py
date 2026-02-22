@@ -40,3 +40,22 @@ for lam in range(-10, 10):
     det = determinant(m)
     if np.isclose(det, 0):
         print(lam)
+
+
+# 4.7 b
+
+ex47 = np.array([[1,1,1], [1,1,1], [1,1,1]])
+p = np.array([[1, -1, -1], [1, 1 ,0], [1, 0, 1]])
+d = np.array([[3, 0, 0], [0, 0, 0], [0, 0, 0]])
+print(p @ d @ np.linalg.inv(p))
+
+# eigenvector with 0 eigenvalue
+print(ex47 @ np.array([-1, 1, 0]))
+print(ex47 @ np.array([-1, 0, 1]))
+
+# 4.7 d
+
+ex47d = np.array([[5, -6, -6], [-1, 4, 2], [3, -6, -4]])
+ex47d_p = np.array([[2, 2, 3], [1, 0, -1], [0, 1,3]])
+ex47d_d = np.array([[2, 0, 0], [0, 2, 0], [0, 0, 1]])
+print(ex47d_p @ ex47d_d @ np.linalg.inv(ex47d_p))
